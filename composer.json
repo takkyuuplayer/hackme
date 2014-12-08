@@ -1,0 +1,13 @@
+{
+    "name": "vagrant/bootstrap-php",
+    "require": {
+        "j4mie/idiorm": "v1.4.1"
+
+    },
+    "authors": [
+        {
+            "name": "takkyuuplayer",
+            "email": "takkyuuplayer@gmail.com"
+        }
+    ]
+}
