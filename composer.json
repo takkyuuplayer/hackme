@@ -1,8 +1,12 @@
 {
-    "name": "vagrant/bootstrap-php",
+    "name": "takkyuuplayer/hackme",
     "require": {
-        "j4mie/idiorm": "v1.4.1"
+        "j4mie/idiorm": "v1.4.1",
+        "erusev/parsedown": "~1.5"
 
+    },
+    "require-dev": {
+      "heroku/heroku-buildpack-php": "*"
     },
     "authors": [
         {
