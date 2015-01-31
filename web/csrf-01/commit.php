@@ -23,8 +23,8 @@
       <li>残ポイント: <?php echo htmlspecialchars($_SESSION['point'], ENT_QUOTES, 'UTF-8'); ?>ポイント</li>
     </ul>
 <?php # logging
-      require_once('../vendor/autoload.php');
-      ORM::configure('sqlite:../db/4.5.sqlite3');
+      require_once('../../vendor/autoload.php');
+      ORM::configure('sqlite:exchange.sqlite3');
       $db = ORM::get_db();
       $db->exec("
         CREATE TABLE IF NOT EXISTS exchange_history (

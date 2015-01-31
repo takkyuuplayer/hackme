@@ -1,6 +1,6 @@
 <?php
-  require_once('../vendor/autoload.php');
-  ORM::configure('sqlite:../db/4.5.sqlite3');
+      require_once('../../vendor/autoload.php');
+      ORM::configure('sqlite:exchange.sqlite3');
   $db = ORM::get_db();
   $db->exec("
     CREATE TABLE IF NOT EXISTS exchange_history (
@@ -16,7 +16,7 @@
         ->find_many()
     ;
 ?>
-<h3>交換履歴(全員分出しちゃってます)</h3>
+<h3>交換履歴</h3>
 <table border="1">
 <thead><tr>
     <th>User</th>
