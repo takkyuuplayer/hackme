@@ -8,7 +8,7 @@
   </head>
   <body>
     <?php if(empty($_SESSION['user'])) : ?>
-        まず<a href="4.5-login.php">ログイン</a>してね！
+        まず<a href="login.php">ログイン</a>してね！
     <?php else : ?>
       <p>
       こんにちは <?php echo htmlspecialchars($_SESSION['user'], ENT_QUOTES, 'UTF-8'); ?> さん！
