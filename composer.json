@@ -2,7 +2,8 @@
     "name": "takkyuuplayer/hackme",
     "require": {
         "j4mie/idiorm": "v1.4.1",
-        "erusev/parsedown": "~1.5"
+        "erusev/parsedown": "~1.5",
+        "ext-pdo_sqlite": "*"
 
     },
     "require-dev": {
