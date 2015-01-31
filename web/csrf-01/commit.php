@@ -7,9 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if(empty($_SESSION['user'])) : ?>
+    <?php if (empty($_SESSION['user'])) : ?>
         まず<a href="login.php">ログイン</a>してね！
-    <?php elseif($_SERVER['REQUEST_METHOD'] !== 'POST'
+    <?php elseif ($_SERVER['REQUEST_METHOD'] !== 'POST'
         || empty($_SESSION['kouza'])
         || empty($_SESSION['exchange'])
     ) : ?>
@@ -23,7 +23,7 @@
       <li>残ポイント: <?php echo htmlspecialchars($_SESSION['point'], ENT_QUOTES, 'UTF-8'); ?>ポイント</li>
     </ul>
 <?php # logging
-      require_once('../../vendor/autoload.php');
+      require_once '../../vendor/autoload.php';
       ORM::configure('sqlite:exchange.sqlite3');
       $db = ORM::get_db();
       $db->exec("
@@ -55,5 +55,3 @@
   <?php endif; ?>
   </body>
 </html>
-
-

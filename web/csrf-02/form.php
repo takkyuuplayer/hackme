@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if(empty($_SESSION['user'])) : ?>
+    <?php if (empty($_SESSION['user'])) : ?>
         まず<a href="login.php">ログイン</a>してね！
     <?php else : ?>
       <p>
@@ -25,7 +25,6 @@
     <?php endif; ?>
 
 <hr>
-<?php require_once('./exchange_history.php'); ?>
+<?php require_once './exchange_history.php'; ?>
 </body>
 </html>
-

@@ -1,5 +1,5 @@
 <?php
-      require_once('../../vendor/autoload.php');
+      require_once '../../vendor/autoload.php';
       ORM::configure('sqlite:exchange.sqlite3');
   $db = ORM::get_db();
   $db->exec("
@@ -25,7 +25,7 @@
     <th>created_at</th>
 </thead>
 <tbody>
-<?php foreach($histories as $history) : ?>
+<?php foreach ($histories as $history) : ?>
 <tr>
 <td><?php echo htmlspecialchars($history->user, ENT_QUOTES, 'UTF-8'); ?></td>
 <td><?php echo htmlspecialchars($history->kouza, ENT_QUOTES, 'UTF-8'); ?></td>

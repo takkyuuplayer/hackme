@@ -7,9 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if(empty($_SESSION['user'])) : ?>
+    <?php if (empty($_SESSION['user'])) : ?>
         まず<a href="login.php">ログイン</a>してね！
-    <?php elseif($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+    <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
 <?php $_SESSION['kouza'] = $_POST['kouza'];
       $_SESSION['exchange'] = $_POST['exchange'];
 ?>
@@ -23,7 +23,7 @@
     </ul>
     <form action="commit.php" method="POST">
         <p>hidden で csrf token が入っているよ</p>
-        <input type="hidden" name="_csrf_token" value="<?php echo md5(__DIR__ . session_id() . 'secret_seed'); ?>" />
+        <input type="hidden" name="_csrf_token" value="<?php echo md5(__DIR__.session_id().'secret_seed'); ?>" />
         <input type="submit" />
     </form>
     <?php else : ?>
@@ -31,4 +31,3 @@
     <?php endif; ?>
   </body>
 </html>
-

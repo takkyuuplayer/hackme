@@ -7,9 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if(empty($_SESSION['user'])) : ?>
+    <?php if (empty($_SESSION['user'])) : ?>
         まず<a href="login.php">ログイン</a>してね！
-    <?php elseif($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+    <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
 <?php $_SESSION['kouza'] = $_POST['kouza'];
       $_SESSION['exchange'] = $_POST['exchange'];
 ?>
@@ -29,4 +29,3 @@
     <?php endif; ?>
   </body>
 </html>
-

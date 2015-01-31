@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
     <p>太郎君「CSRF攻撃って恐ろしいね。でも重大な処理の直前にトークンのチェックを入れておけば大丈夫だよね？」</p>
     <p>交換処理が確定する「confirm.php → commit.php」を重大な処理だと考えた太郎君は、commit.phpでCSRFトークンを確認することにしました。</p>
     <p>果たしてCSRF対策を施すのはそこだけで十分なのでしょうか?</p>
@@ -17,7 +17,7 @@
             <input name="user" type="text" placeHolder="ユーザー名">
             <input type="submit">
         </form>
-    <?php elseif($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+    <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
         <?php session_regenerate_id(true);
             $_SESSION['user'] = $_POST['user'];
             $_SESSION['point'] = 10000;

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
-    <?php if($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
+    <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
     <p>太郎君はとあるサイトのポイント交換機能を実装することになりました。</p>
     <hr>
         ログインしてね！
@@ -15,7 +15,7 @@
             <input name="user" type="text" placeHolder="ユーザー名">
             <input type="submit">
         </form>
-    <?php elseif($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+    <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
         <?php session_regenerate_id(true);
             $_SESSION['user'] = $_POST['user'];
             $_SESSION['point'] = 10000;
