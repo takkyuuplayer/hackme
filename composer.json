@@ -8,12 +8,18 @@
 
     },
     "require-dev": {
-      "heroku/heroku-buildpack-php": "*"
+      "heroku/heroku-buildpack-php": "*",
+        "phpunit/phpunit": "4.*"
     },
     "authors": [
         {
             "name": "takkyuuplayer",
             "email": "takkyuuplayer@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+      "psr-4": {
+        "Hackme\\": "src/"
+      }
+    }
 }

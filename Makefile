@@ -8,3 +8,6 @@ setup: composer_install
 
 composer_install:
 	$(CURL) -s https://getcomposer.org/installer | php
+
+test:
+	./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/
