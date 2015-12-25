@@ -1,8 +1,10 @@
 PHP=$(shell which php)
 CURL=$(shell which curl)
 
-setup:
-	$(CURL) -s https://getcomposer.org/installer | php
+all: setup
 
-install: setup
+setup: composer_install
 	$(PHP) composer.phar install
+
+composer_install:
+	$(CURL) -s https://getcomposer.org/installer | php
