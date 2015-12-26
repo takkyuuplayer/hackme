@@ -1,13 +1,16 @@
 <?php
-class MoneyTest extends PHPUnit_Framework_TestCase
+class HerokuClearDBTest extends PHPUnit_Framework_TestCase
 {
-    public function testCanBeNegated()
+    public function testGetConfig()
     {
-        $a = new Money(1);
-
-        $b = $a->negate();
-
-        $this->assertEquals(-1, $b->getAmount());
+        $this->assertEquals(
+            \Hackme\Heroku\ClearDB::getConfig(),
+            [
+            'dsn'      => 'mysql:dbname=hackme;host=localhost;port=3306',
+            'user'     => 'hackmeuser',
+            'password' => 'hackmeuser',
+            'db'       => 'hackme',
+            ]
+        );
     }
 }
-
