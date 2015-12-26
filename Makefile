@@ -1,9 +1,9 @@
 PHP=$(shell which php)
 CURL=$(shell which curl)
 
-all: setup
+all: setup mysql_setup
 
-setup: composer_install
+setup:
 	$(PHP) composer.phar install
 
 mysql_setup:
