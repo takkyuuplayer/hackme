@@ -18,7 +18,7 @@ db-setup:
 	$(PHP) ./bin/mysql-setup.php
 
 test:
-	./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+	./vendor/bin/phpunit --bootstrap tests/bootstrap.php tests
 
 local:
 	mysql -uroot <./etc/schema/local/database.sql
