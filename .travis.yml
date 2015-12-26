@@ -5,6 +5,5 @@ php:
 services:
   - mysql
 install:
-  - make local
-  - make setup
+  - make local && make
 script: make test
