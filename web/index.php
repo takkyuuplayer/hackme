@@ -6,7 +6,8 @@ $markdown = "
 
 ## SQL Injection
 
-* [Q. 01](sql-injection-01/index.php)
+* [Q. 01](sql-injection-01/)
+* [Q. 02](sql-injection-02/)
 
 ## Cross Site Request Forgery (CSRF)
 

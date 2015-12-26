@@ -8,6 +8,8 @@
 </head>
 
 <body>
+  <a href="/">TOP</a>
+  <p style="padding:1em; background-color:#EEE;">Q. SQL Injection の脆弱性を突き、test@user.com としてログインせよ</p>
   <?php session_start(); ?>
     <?php if ($_SESSION['user_id']) : ?>
       <?php $con = \Hackme\Heroku\ClearDB::getConnection();
@@ -23,8 +25,6 @@
         <input type="password" name="password" placeHolder="password">
         <input type="submit" value="Login">
       </form>
-      <hr>
-      <p>Q. test@user.com としてログインせよ</p>
       <?php if(isset($_SESSION['error'])) {
         echo htmlspecialchars($_SESSION['error'], ENT_QUOTES, 'UTF-8');
         unset($_SESSION['error']);
