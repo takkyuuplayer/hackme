@@ -17,3 +17,5 @@ test:
 
 vagrant:
 	mysql -uroot ./etc/schema/vagrant/database.sql
+debug:
+	$(PHP) -S 192.168.33.101:8080 -t web/
