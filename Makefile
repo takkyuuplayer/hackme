@@ -1,7 +1,7 @@
 PHP=$(shell which php)
 CURL=$(shell which curl)
 ifneq ("$(wildcard composer.phar)", "")
-COMPOSER=composer.phar
+COMPOSER=./composer.phar
 else
 COMPOSER=composer
 endif
@@ -9,10 +9,10 @@ endif
 all: composer-update composer-setup db-setup
 
 composer-update:
-	$(PHP) $(COMPOSER) self-update
+	$(COMPOSER) self-update
 
 composer-setup:
-	$(PHP) $(COMPOSER) install
+	$(COMPOSER) install
 
 db-setup:
 	$(PHP) ./bin/mysql-setup.php
