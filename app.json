@@ -1,7 +1,7 @@
 {
   "name": "takkyuuplayer/hackme",
   "scripts": {
-    "postdeploy": "make mysql_setup"
+    "postdeploy": "make db-setup"
   },
   "addons": [
     "cleardb:ignite"
