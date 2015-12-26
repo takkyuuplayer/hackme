@@ -1,3 +1,10 @@
 {
-    "name": "takkyuuplayer/hackme"
+  "name": "takkyuuplayer/hackme",
+  "scripts": {
+    "postdeploy": "make mysql_setup"
+  },
+  "addons": [
+    "cleardb:ignite"
+  ]
+
 }
