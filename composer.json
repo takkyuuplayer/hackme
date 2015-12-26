@@ -9,7 +9,7 @@
     },
     "require-dev": {
       "heroku/heroku-buildpack-php": "*",
-        "phpunit/phpunit": "4.*"
+        "phpunit/phpunit": "*"
     },
     "authors": [
         {
