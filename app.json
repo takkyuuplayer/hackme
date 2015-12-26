@@ -1,10 +1,13 @@
 {
   "name": "takkyuuplayer/hackme",
+  "description": "Excercise for Web Security",
+  "website": "https://www.takkyuuplayer.com/",
+  "repository": "https://github.com/takkyuuplayer/hackme",
   "scripts": {
     "postdeploy": "make db-setup"
   },
+  "image": "heroku/php",
   "addons": [
     "cleardb:ignite"
   ]
-
 }
