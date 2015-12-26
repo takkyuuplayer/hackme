@@ -6,6 +6,9 @@ all: setup
 setup: composer_install
 	$(PHP) composer.phar install
 
+mysql_setup:
+	$(PHP) ./bin/mysql-setup.php
+
 composer_install:
 	$(CURL) -s https://getcomposer.org/installer | php
 
