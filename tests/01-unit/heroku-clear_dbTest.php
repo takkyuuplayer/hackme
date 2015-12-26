@@ -6,27 +6,33 @@ class HerokuClearDBTest extends PHPUnit_Framework_TestCase
         putenv('CLEARDB_DATABASE_URL=mysql://username:password@hostname/dbname?reconnect=true');
 
         $this->assertEquals(
-            \Hackme\Heroku\ClearDB::getConfig(),
             [
             'dsn'      => 'mysql:dbname=dbname;host=hostname;port=3306',
-            'user'     => 'username',
+            'username'     => 'username',
             'password' => 'password',
             'db'       => 'dbname',
             ],
-            'w/ clear db'
+            \Hackme\Heroku\ClearDB::getConfig()
         );
     }
     public function testGetConfigWithoutClearDB()
     {
         $this->assertEquals(
-            \Hackme\Heroku\ClearDB::getConfig(),
             [
             'dsn'      => 'mysql:dbname=hackme;host=localhost;port=3306',
-            'user'     => 'hackmeuser',
-            'password' => 'hackmeuser',
+            'username' => 'hackmeuser',
+            'password' => 'hackmepass',
             'db'       => 'hackme',
-            ]
+            ],
+            \Hackme\Heroku\ClearDB::getConfig()
         );
+    }
+
+    public function testGetConnection()
+    {
+        $pdo = \Hackme\Heroku\ClearDB::getConnection();
+
+        $this->assertInstanceOf('PDO', $pdo);
     }
 
     protected function tearDown()

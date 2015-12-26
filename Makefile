@@ -11,3 +11,6 @@ composer_install:
 
 test:
 	./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
+
+vagrant:
+	mysql -uroot ./etc/schema/vagrant/database.sql
