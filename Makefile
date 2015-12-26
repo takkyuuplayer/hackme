@@ -15,7 +15,10 @@ composer_install:
 test:
 	./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 
-vagrant:
-	mysql -uroot ./etc/schema/vagrant/database.sql
+local:
+	mysql -uroot <./etc/schema/local/database.sql
 debug:
 	$(PHP) -S 192.168.33.101:8080 -t web/
+
+help:
+	cat Makefile
