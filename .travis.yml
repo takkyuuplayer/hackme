@@ -6,7 +6,5 @@ services:
   - mysql
 install:
   - make local
-  - make mysql_setup
-  - composer --self-update
-  - composer install
+  - make setup
 script: make test

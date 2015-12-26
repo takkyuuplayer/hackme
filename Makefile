@@ -1,24 +1,33 @@
 PHP=$(shell which php)
 CURL=$(shell which curl)
+ifneq ("$(wildcard composer.phar)", "")
+COMPOSER=composer.phar
+else
+COMPOSER=composer
+endif
 
-all: setup mysql_setup
+all: composer-update composer-setup db-setup
 
-setup:
-	$(PHP) composer.phar install
+composer-update:
+	$(PHP) $(COMPOSER) self-update
 
-mysql_setup:
+composer-setup:
+	$(PHP) $(COMPOSER) install
+
+db-setup:
 	$(PHP) ./bin/mysql-setup.php
-
-composer_install:
-	$(CURL) -s https://getcomposer.org/installer | php
 
 test:
 	./vendor/bin/phpunit --bootstrap vendor/autoload.php tests
 
 local:
 	mysql -uroot <./etc/schema/local/database.sql
+
 debug:
 	$(PHP) -S 192.168.33.101:8080 -t web/
+
+composer-install:
+	$(CURL) -s https://getcomposer.org/installer | php
 
 help:
 	cat Makefile
