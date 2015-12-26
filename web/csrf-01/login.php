@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
+    <a href="/">TOP</a>
     <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
     <p>太郎君はとあるサイトのポイント交換機能を実装することになりました。</p>
     <hr>

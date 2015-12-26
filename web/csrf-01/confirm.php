@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
+    <a href="/">TOP</a>
     <?php if (empty($_SESSION['user'])) : ?>
         まず<a href="login.php">ログイン</a>してね！
     <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>

@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
   <body>
+    <a href="/">TOP</a>
     <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
     <p>太郎君「CSRF攻撃って恐ろしいね。でも重大な処理の直前にトークンのチェックを入れておけば大丈夫だよね？」</p>
     <p>交換処理が確定する「confirm.php → commit.php」を重大な処理だと考えた太郎君は、commit.phpでCSRFトークンを確認することにしました。</p>
