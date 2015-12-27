@@ -1,6 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
+require '../bin/mysql-setup.php';
 
 $markdown = "
 
